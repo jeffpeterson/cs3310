@@ -1,0 +1,63 @@
+QN China
+QN CHINA
+QN chinA
+QN Chin
+QN China          
+QN China		
+QN China doll
+QN China
+QN # is < 0-9 (& so < A-Z)
+QN 4 is < A-Z
+QN = is > 0-9 & < A-Z
+QN ] is > A-Z & < a-z
+QN } is > a-z
+QN China=
+QN China
+QN   China
+QN Wallis
+QN Wallis and Futuna
+QN Wallis & Futuna
+QN Australia
+QN Zimbabwe
+QN Jordan
+QN Japan
+QN Liechtenstein
+QN London
+QN Albania
+QN Western Michigan University
+QN Zoo
+LN
+DN China
+DN Australia
+QN China
+QN Australia
+DN United States
+QN United States
+IN ...... .... ......... ...... ('ARG','Argentina','South America','South America',2780400,1816,37032000,75.1,340238,323310,'Argentina','Federal Republic','Fernando de la Rúa',69,'AR');
+IN ...... .... ......... ...... ('JPN','Japan','Asia','Eastern Asia',377829,-660,126714000,80.7,3787042,4192638,'Nihon/Nippon','Constitutional Monarchy','Akihito',1532,'JP');
+IN ...... .... ......... ...... ('JAM','Jamaica','North America','Caribbean',10990,1962,2583000,75.2,6871,6722,'Jamaica','Constitutional Monarchy','Elisabeth II',1530,'JM');
+IN ...... .... ......... ...... ('CUB','Cuba','North America','Caribbean',110861,1902,11201000,76.2,17843,18862,'Cuba','Socialistic Republic','Fidel Castro Ruz',2413,'CU');
+IN ...... .... ......... ...... ('AUT','Austria','Europe','Western Europe',83859,1918,8091800,77.7,211860,206025,'Österreich','Federal Republic','Thomas Klestil',1523,'AT');
+IN ...... .... ......... ...... ('AZE','Azerbaijan','Asia','Middle East',86600,1991,7734000,62.9,4127,4100,'Azärbaycan','Federal Republic','Heydär Äliyev',144,'AZ');
+IN ...... .... ......... ...... ('BWA','Botswana','Africa','Southern Africa',581730,1966,1622000,39.3,4834,4935,'Botswana','Republic','Festus G. Mogae',204,'BW');
+IN ...... .... ......... ...... ('GBR','United Kingdom','Europe','British Islands',242900,1066,59623400,77.7,1378330,1296830,'United Kingdom','Constitutional Monarchy','Elisabeth II',456,'GB');
+IN ...... .... ......... ...... ('CAN','Canada','North America','North America',9970610,1867,31147000,79.4,598862,625626,'Canada','Constitutional Monarchy - Federation','Elisabeth II',1822,'CA');
+IN ...... .... ......... ...... ('KAZ','Kazakstan','Asia','Southern and Central Asia',2724900,1991,16223000,63.2,24375,23383,'Qazaqstan','Republic','Nursultan Nazarbajev',1864,'KZ');
+IN ...... .... ......... ...... ('UMI','United States Minor Outlying Islands','Oceania','Micronesia/Caribbean',16,NULL,0,NULL,0,NULL,'United States Minor Outlying Islands','Dependent Territory of the US','George W. Bush',NULL,'UM');
+QN Argentina
+QN Japan
+QN Jamaica
+QN Cuba
+QN Austria
+QN Azerbaijan
+QN Botswana
+QN United Kingdom
+QN Canada
+QN Kazakstan
+QN United States Minor Outlying Islands
+QN United States
+QN United
+QN A
+QN Apples
+QN Zorro
+LN
