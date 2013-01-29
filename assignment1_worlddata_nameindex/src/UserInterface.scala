@@ -8,6 +8,15 @@ object UserInterface {
   file.createNewFile
 
   val out = new BufferedWriter( new FileWriter(file.getAbsoluteFile(), true) )
+
+  log("opened Log FILE")
+
+  def log(thing: Any) = println(">> " + thing)
+
+  def finish = {
+    log("closed Log FILE")
+    out.close
+  }
   
   def println(str: String) {
     Console.println(str)
@@ -15,6 +24,7 @@ object UserInterface {
     out.newLine
     out.flush
   }
+  
 
   // note that Source.fromFile returns a BufferedSource and doesn't load the entire file into memory
   // (though for a file this small, it probably does)

@@ -1,13 +1,20 @@
 build: src/*.scala
 	fsc -d bin/ src/*.scala
 
-run_setup:
+clean:
+	rm tmp/*
+
+SetupProgram:
 	scala -classpath bin SetupProgram
 
-run_user:
+UserApp:
 	scala -classpath bin UserApp
 
-make run: run_user
+PrettyPrintUtility:
+	scala -classpath bin PrettyPrintUtility
+
+run: clean SetupProgram PrettyPrintUtility UserApp
+	scala -classpath bin PrettyPrintUtility
 
 all: build run
 

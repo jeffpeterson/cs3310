@@ -1,0 +1,262 @@
+>> opened Log FILE
+>> started SetupProgram
+>> ended SetupProgram - 25 data items processed
+>> opened Log FILE
+>> started PrettyPrintUtility
+>> opened NameIndexBackup FILE
+>> closed NameIndexBackup FILE
+N is 25, MaxID is 25, RootPtr is 000
+[SUB]  - - - Name - - - - - - - - -  DRP  LCh  RCh
+[000]  China                         001  003  001
+[001]  India                         002  007  002
+[002]  United States                 003  004  011
+[003]  Brazil                        004  012  -01
+[004]  Russian Federation            005  005  008
+[005]  Nigeria                       006  006  020
+[006]  Mexico                        007  010  -01
+[007]  Egypt                         008  018  009
+[008]  Turkey                        009  017  -01
+[009]  France                        010  -01  015
+[010]  Kenya                         011  019  023
+[011]  Venezuela                     012  -01  013
+[012]  Australia                     013  -01  -01
+[013]  Zimbabwe                      014  014  -01
+[014]  Yugoslavia                    015  024  -01
+[015]  Greece                        016  -01  016
+[016]  Hungary                       017  -01  -01
+[017]  Sweden                        018  -01  -01
+[018]  Dominican Republic            019  -01  -01
+[019]  Jordan                        020  -01  -01
+[020]  Palestine                     021  021  022
+[021]  Oman                          022  -01  -01
+[022]  Qatar                         023  -01  -01
+[023]  Liechtenstein                 024  -01  -01
+[024]  Wallis and Futuna             025  -01  -01
+@ @ @ @ @ @ @ @ @ END OF FILE @ @ @ @ @ @ @ @
+>> ended PrettyPrintUtility
+>> closed Log FILE
+>> opened Log FILE
+>> started UserApp
+>> opened TransData FILE
+QN CHINA
+>> opened NameIndexBackup FILE
+>> closed NameIndexBackup FILE
+  China 026 >> 1 nodes visited
+QN chinA
+  China 027 >> 1 nodes visited
+QN Chin
+  ERROR - not a valid country name >> 3 nodes visited
+QN China          
+  ERROR - not a valid country name >> 5 nodes visited
+QN China		
+  ERROR - not a valid country name >> 5 nodes visited
+QN China doll
+  ERROR - not a valid country name >> 5 nodes visited
+QN China
+  China 032 >> 1 nodes visited
+QN # is < 0-9 (& so < A-Z)
+  ERROR - not a valid country name >> 4 nodes visited
+QN 4 is < A-Z
+  ERROR - not a valid country name >> 4 nodes visited
+QN = is > 0-9 & < A-Z
+  ERROR - not a valid country name >> 4 nodes visited
+QN ] is > A-Z & < a-z
+  ERROR - not a valid country name >> 4 nodes visited
+QN } is > a-z
+  ERROR - not a valid country name >> 6 nodes visited
+QN China=
+  ERROR - not a valid country name >> 5 nodes visited
+QN China
+  China 039 >> 1 nodes visited
+QN   China
+  China 040 >> 1 nodes visited
+QN Wallis
+  ERROR - not a valid country name >> 8 nodes visited
+QN Wallis and Futuna
+  Wallis and Futuna 042 >> 7 nodes visited
+QN Wallis & Futuna
+  ERROR - not a valid country name >> 8 nodes visited
+QN Australia
+  Australia 044 >> 3 nodes visited
+QN Zimbabwe
+  Zimbabwe 045 >> 5 nodes visited
+QN Jordan
+  Jordan 046 >> 8 nodes visited
+QN Japan
+  ERROR - not a valid country name >> 9 nodes visited
+QN Liechtenstein
+  Liechtenstein 048 >> 8 nodes visited
+QN London
+  ERROR - not a valid country name >> 9 nodes visited
+QN Albania
+  ERROR - not a valid country name >> 4 nodes visited
+QN Western Michigan University
+  ERROR - not a valid country name >> 8 nodes visited
+QN Zoo
+  ERROR - not a valid country name >> 6 nodes visited
+LN
+  Australia
+  Brazil
+  China
+  Dominican Republic
+  Egypt
+  France
+  Greece
+  Hungary
+  India
+  Jordan
+  Kenya
+  Liechtenstein
+  Mexico
+  Nigeria
+  Oman
+  Palestine
+  Qatar
+  Russian Federation
+  Sweden
+  Turkey
+  United States
+  Venezuela
+  Wallis and Futuna
+  Yugoslavia
+  Zimbabwe
+DN China
+ SORRY, DeleteByName not yet oeprational
+DN Australia
+ SORRY, DeleteByName not yet oeprational
+QN China
+  China 053 >> 1 nodes visited
+QN Australia
+  Australia 054 >> 3 nodes visited
+DN United States
+ SORRY, DeleteByName not yet oeprational
+QN United States
+  United States 055 >> 3 nodes visited
+IN ...... .... ......... ...... ('ARG','Argentina','South America','South America',2780400,1816,37032000,75.1,340238,323310,'Argentina','Federal Republic','Fernando de la Rúa',69,'AR');
+IN ...... .... ......... ...... ('JPN','Japan','Asia','Eastern Asia',377829,-660,126714000,80.7,3787042,4192638,'Nihon/Nippon','Constitutional Monarchy','Akihito',1532,'JP');
+IN ...... .... ......... ...... ('JAM','Jamaica','North America','Caribbean',10990,1962,2583000,75.2,6871,6722,'Jamaica','Constitutional Monarchy','Elisabeth II',1530,'JM');
+IN ...... .... ......... ...... ('CUB','Cuba','North America','Caribbean',110861,1902,11201000,76.2,17843,18862,'Cuba','Socialistic Republic','Fidel Castro Ruz',2413,'CU');
+IN ...... .... ......... ...... ('AUT','Austria','Europe','Western Europe',83859,1918,8091800,77.7,211860,206025,'Österreich','Federal Republic','Thomas Klestil',1523,'AT');
+IN ...... .... ......... ...... ('AZE','Azerbaijan','Asia','Middle East',86600,1991,7734000,62.9,4127,4100,'Azärbaycan','Federal Republic','Heydär Äliyev',144,'AZ');
+IN ...... .... ......... ...... ('BWA','Botswana','Africa','Southern Africa',581730,1966,1622000,39.3,4834,4935,'Botswana','Republic','Festus G. Mogae',204,'BW');
+IN ...... .... ......... ...... ('GBR','United Kingdom','Europe','British Islands',242900,1066,59623400,77.7,1378330,1296830,'United Kingdom','Constitutional Monarchy','Elisabeth II',456,'GB');
+IN ...... .... ......... ...... ('CAN','Canada','North America','North America',9970610,1867,31147000,79.4,598862,625626,'Canada','Constitutional Monarchy - Federation','Elisabeth II',1822,'CA');
+IN ...... .... ......... ...... ('KAZ','Kazakstan','Asia','Southern and Central Asia',2724900,1991,16223000,63.2,24375,23383,'Qazaqstan','Republic','Nursultan Nazarbajev',1864,'KZ');
+IN ...... .... ......... ...... ('UMI','United States Minor Outlying Islands','Oceania','Micronesia/Caribbean',16,NULL,0,NULL,0,NULL,'United States Minor Outlying Islands','Dependent Territory of the US','George W. Bush',NULL,'UM');
+QN Argentina
+  Argentina 067 >> 4 nodes visited
+QN Japan
+  Japan 068 >> 9 nodes visited
+QN Jamaica
+  Jamaica 069 >> 10 nodes visited
+QN Cuba
+  Cuba 070 >> 5 nodes visited
+QN Austria
+  Austria 071 >> 4 nodes visited
+QN Azerbaijan
+  Azerbaijan 072 >> 5 nodes visited
+QN Botswana
+  Botswana 073 >> 6 nodes visited
+QN United Kingdom
+  United Kingdom 074 >> 6 nodes visited
+QN Canada
+  Canada 075 >> 3 nodes visited
+QN Kazakstan
+  Kazakstan 076 >> 9 nodes visited
+QN United States Minor Outlying Islands
+  United States Minor Outlying Islands 077 >> 5 nodes visited
+QN United States
+  United States 078 >> 3 nodes visited
+QN United
+  ERROR - not a valid country name >> 7 nodes visited
+QN A
+  ERROR - not a valid country name >> 5 nodes visited
+QN Apples
+  ERROR - not a valid country name >> 5 nodes visited
+QN Zorro
+  ERROR - not a valid country name >> 6 nodes visited
+LN
+  Argentina
+  Australia
+  Austria
+  Azerbaijan
+  Botswana
+  Brazil
+  Canada
+  China
+  Cuba
+  Dominican Republic
+  Egypt
+  France
+  Greece
+  Hungary
+  India
+  Jamaica
+  Japan
+  Jordan
+  Kazakstan
+  Kenya
+  Liechtenstein
+  Mexico
+  Nigeria
+  Oman
+  Palestine
+  Qatar
+  Russian Federation
+  Sweden
+  Turkey
+  United Kingdom
+  United States
+  United States Minor Outlying Islands
+  Venezuela
+  Wallis and Futuna
+  Yugoslavia
+  Zimbabwe
+>> closed TransData FILE
+>> ended UserApp - () transactions processed
+>> closed Log FILE
+>> opened Log FILE
+>> started PrettyPrintUtility
+>> opened NameIndexBackup FILE
+>> closed NameIndexBackup FILE
+N is 36, MaxID is 36, RootPtr is 000
+[SUB]  - - - Name - - - - - - - - -  DRP  LCh  RCh
+[000]  China                         001  003  001
+[001]  India                         002  007  002
+[002]  United States                 003  004  011
+[003]  Brazil                        004  012  033
+[004]  Russian Federation            005  005  008
+[005]  Nigeria                       006  006  020
+[006]  Mexico                        007  010  -01
+[007]  Egypt                         008  018  009
+[008]  Turkey                        009  017  032
+[009]  France                        010  -01  015
+[010]  Kenya                         011  019  023
+[011]  Venezuela                     012  035  013
+[012]  Australia                     013  025  029
+[013]  Zimbabwe                      014  014  -01
+[014]  Yugoslavia                    015  024  -01
+[015]  Greece                        016  -01  016
+[016]  Hungary                       017  -01  -01
+[017]  Sweden                        018  -01  -01
+[018]  Dominican Republic            019  028  -01
+[019]  Jordan                        020  026  034
+[020]  Palestine                     021  021  022
+[021]  Oman                          022  -01  -01
+[022]  Qatar                         023  -01  -01
+[023]  Liechtenstein                 024  -01  -01
+[024]  Wallis and Futuna             025  -01  -01
+[025]  Argentina                     026  -01  -01
+[026]  Japan                         027  027  -01
+[027]  Jamaica                       028  -01  -01
+[028]  Cuba                          029  -01  -01
+[029]  Austria                       030  -01  030
+[030]  Azerbaijan                    031  -01  031
+[031]  Botswana                      032  -01  -01
+[032]  United Kingdom                033  -01  -01
+[033]  Canada                        034  -01  -01
+[034]  Kazakstan                     035  -01  -01
+[035]  United States Minor Outlying  036  -01  -01
+@ @ @ @ @ @ @ @ @ END OF FILE @ @ @ @ @ @ @ @
+>> ended PrettyPrintUtility
+>> closed Log FILE

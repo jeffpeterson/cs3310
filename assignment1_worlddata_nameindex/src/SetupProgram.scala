@@ -1,5 +1,10 @@
+import UserInterface.log
+import UserInterface.println
+
 object SetupProgram {
   def main (args: Array[String]) {
+
+    log("started SetupProgram")
 
     RawData.foreach { name =>
       NameIndex.insert(new Record(name))
@@ -7,6 +12,6 @@ object SetupProgram {
 
     NameIndex.backup
 
-    // save NameIndex to Backup file
+    log(s"ended SetupProgram - ${NameIndex.size} data items processed")
   }
 }
