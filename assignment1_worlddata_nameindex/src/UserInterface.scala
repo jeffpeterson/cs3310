@@ -1,13 +1,10 @@
-import java.io.File
-import java.io.FileWriter
-import java.io.BufferedWriter
+// Author: Jeff Peterson
+
 import scala.io.Source
+import com.petersonj.io.Output
 
 object UserInterface {
-  val file = new File("tmp/Log.txt")
-  file.createNewFile
-
-  val out = new BufferedWriter( new FileWriter(file.getAbsoluteFile(), true) )
+  val out = Output.toFile("tmp/Log.txt", true)
 
   log("opened Log FILE")
 
@@ -19,7 +16,6 @@ object UserInterface {
   }
   
   def println(str: String) {
-    Console.println(str)
     out.write(str)
     out.newLine
     out.flush

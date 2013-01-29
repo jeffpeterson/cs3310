@@ -1,8 +1,9 @@
+// Author: Jeff Peterson
+
 import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 import java.io.File
-import java.io.FileWriter
-import java.io.BufferedWriter
+import com.petersonj.io.Output
 
 import UserInterface.log
 import UserInterface.println
@@ -27,15 +28,11 @@ object NameIndex {
     else tree.insert( new Tree(index, record) )
   }
 
+  def queryByName(name: String) = tree.search( new Record(name) )
 
   def apply(index: Int): Tree = if (index < 0) new Tree() else nodes(index)
 
-  def apply(name: String):Record = tree.search( new Record(name) )
   def listNames: List[String] = tree.listNames
-
-  def delete(name: String) = {
-    this( name )
-  }
 
   def loadBackupFile {
     val file = new File("tmp/NameIndexBackup.txt")
@@ -52,11 +49,8 @@ object NameIndex {
     log("closed NameIndexBackup FILE")
   }
 
-  def backup {
-    val file = new File("tmp/NameIndexBackup.txt")
-    file.createNewFile
-
-    val out = new BufferedWriter( new FileWriter(file.getAbsoluteFile(), false) )
+  def finish {
+    val out = Output.toFile("tmp/NameIndexBackup.txt")
 
     out.write(nodes.mkString("\n"))
     out.close()

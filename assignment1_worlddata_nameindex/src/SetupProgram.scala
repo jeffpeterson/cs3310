@@ -1,3 +1,5 @@
+// Author: Jeff Peterson
+
 import UserInterface.log
 import UserInterface.println
 
@@ -10,7 +12,7 @@ object SetupProgram {
       NameIndex.insert(new Record(name))
     }
 
-    NameIndex.backup
+    NameIndex.finish
 
     log(s"ended SetupProgram - ${NameIndex.size} data items processed")
   }

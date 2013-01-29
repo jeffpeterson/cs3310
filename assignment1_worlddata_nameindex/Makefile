@@ -1,5 +1,5 @@
 build: src/*.scala
-	fsc -d bin/ src/*.scala
+	fsc -d bin/ src/*.scala ~/code/scala/library/*.scala
 
 clean:
 	rm tmp/*

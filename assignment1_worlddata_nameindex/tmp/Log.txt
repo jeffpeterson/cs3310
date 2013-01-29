@@ -1,10 +1,12 @@
 >> opened Log FILE
 >> started SetupProgram
+>> opened RawDataTester FILE
+>> closed RawDataTester FILE
 >> ended SetupProgram - 25 data items processed
 >> opened Log FILE
->> started PrettyPrintUtility
 >> opened NameIndexBackup FILE
 >> closed NameIndexBackup FILE
+>> started PrettyPrintUtility
 N is 25, MaxID is 25, RootPtr is 000
 [SUB]  - - - Name - - - - - - - - -  DRP  LCh  RCh
 [000]  China                         001  003  001
@@ -34,7 +36,6 @@ N is 25, MaxID is 25, RootPtr is 000
 [024]  Wallis and Futuna             025  -01  -01
 @ @ @ @ @ @ @ @ @ END OF FILE @ @ @ @ @ @ @ @
 >> ended PrettyPrintUtility
->> closed Log FILE
 >> opened Log FILE
 >> started UserApp
 >> opened TransData FILE
@@ -213,12 +214,12 @@ LN
   Yugoslavia
   Zimbabwe
 >> closed TransData FILE
->> ended UserApp - () transactions processed
+>> ended UserApp - 62 transactions processed
 >> closed Log FILE
 >> opened Log FILE
->> started PrettyPrintUtility
 >> opened NameIndexBackup FILE
 >> closed NameIndexBackup FILE
+>> started PrettyPrintUtility
 N is 36, MaxID is 36, RootPtr is 000
 [SUB]  - - - Name - - - - - - - - -  DRP  LCh  RCh
 [000]  China                         001  003  001
@@ -259,4 +260,3 @@ N is 36, MaxID is 36, RootPtr is 000
 [035]  United States Minor Outlying  036  -01  -01
 @ @ @ @ @ @ @ @ @ END OF FILE @ @ @ @ @ @ @ @
 >> ended PrettyPrintUtility
->> closed Log FILE
