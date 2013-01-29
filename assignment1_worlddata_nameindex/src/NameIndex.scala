@@ -27,12 +27,11 @@ object NameIndex {
     else tree.insert( new Tree(index, record) )
   }
 
-  def apply(index: Int): Tree = {
-    if (index < 0) null else nodes(index)
-  }
 
-  def apply(name: String):Record = if (tree != null) tree.search( new Record(name) ) else null
-  def listNames: List[String] = if (tree != null) tree.listNames else null
+  def apply(index: Int): Tree = if (index < 0) new Tree() else nodes(index)
+
+  def apply(name: String):Record = tree.search( new Record(name) )
+  def listNames: List[String] = tree.listNames
 
   def delete(name: String) = {
     this( name )
@@ -51,7 +50,6 @@ object NameIndex {
       nodes.append(new Tree(index.toInt, new Record(name), left.toInt, right.toInt))
     }
     log("closed NameIndexBackup FILE")
-
   }
 
   def backup {
@@ -64,48 +62,41 @@ object NameIndex {
     out.close()
   }
 
-
-  class Tree(private val _index: Int, private val _record: Record, var _leftIndex:Int = -1, var _rightIndex:Int = -1) {
+  class Tree(private val _index: Int = -1, private val _record: Record = null, var _leftIndex:Int = -1, var _rightIndex:Int = -1) {
     def record = _record
     def index  = _index
 
     def left:  Tree = NameIndex(_leftIndex)
     def right: Tree = NameIndex(_rightIndex)
+    def left_=(node: Tree) = _leftIndex = node.index
+    def right_=(node: Tree) = _rightIndex = node.index
 
     def leftIndex = _leftIndex
     def rightIndex = _rightIndex
+    def isLeaf = record == null
 
     def insert(node: Tree) {
       if (node.record < record)
-        if (_leftIndex < 0) _leftIndex = node.index
-        else left insert node
+        if (left.isLeaf) left = node else left insert node
       else
-        if (_rightIndex < 0) _rightIndex = node.index
-        else right insert node
+        if (right.isLeaf) right = node else right insert node
     }
 
     def search(record: Record, nodesVisited: Int = 1):Record = {
-      if (record < _record) searchLeft(record, nodesVisited + 1)
-      else if (record > _record) searchRight(record, nodesVisited + 1)
+      if (isLeaf) {
+        println(s"  ERROR - not a valid country name >> $nodesVisited nodes visited")
+        return null
+      }
+
+      if (record < _record)      left.search(record, nodesVisited + 1)
+      else if (record > _record) right.search(record, nodesVisited + 1)
       else {
         println(f"  ${_record.name} ${record.id}%03d >> $nodesVisited nodes visited")
         _record
       }
     }
 
-    def searchLeft(record: Record, nodesVisited: Int):Record  = if (_leftIndex < 0) {
-      println(s"  ERROR - not a valid country name >> $nodesVisited nodes visited")
-      null
-    } else left.search(record, nodesVisited)
-
-    def searchRight(record: Record, nodesVisited: Int):Record = if (_rightIndex < 0)  {
-      println(s"  ERROR - not a valid country name >> $nodesVisited nodes visited")
-      null
-    } else right.search(record, nodesVisited)
-
-    def listNames: List[String] =
-      (if (leftIndex > 0) left.listNames else List()) ++ (record.name :: (if (rightIndex > 0) right.listNames else List()))
-    
+    def listNames: List[String] = if (isLeaf) List() else left.listNames ++ (record.name :: right.listNames)
 
     override def toString:String = List(index, record.name, record.id, _leftIndex, _rightIndex ).mkString("\t")
   }
