@@ -29,6 +29,7 @@ object NameIndex {
   }
 
   def queryByName(name: String) = tree.search( new Record(name) )
+  def deleteByName(name: String) = println(" SORRY, DeleteByName not yet oeprational")
 
   def apply(index: Int): Tree = if (index < 0) new Tree() else nodes(index)
 
@@ -41,7 +42,7 @@ object NameIndex {
     _rootIndex = 0
 
     log("opened NameIndexBackup FILE")
-    for (line <- Source.fromFile(file).getLines) {
+    for (line <- Source.fromFile(file).getLines.drop(1)) {
       val Array(index, name, id, left, right) = line.split('\t')
       
       nodes.append(new Tree(index.toInt, new Record(name), left.toInt, right.toInt))
@@ -52,6 +53,7 @@ object NameIndex {
   def finish {
     val out = Output.toFile("tmp/NameIndexBackup.txt")
 
+    out.println(f"N is ${size}, MaxID is ${Record.maxId}, RootPtr is ${rootIndex}%03d")
     out.write(nodes.mkString("\n"))
     out.close()
   }

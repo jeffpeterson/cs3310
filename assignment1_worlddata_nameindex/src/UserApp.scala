@@ -25,7 +25,7 @@ object UserApp {
       transactionsProcessed += 1
       regex findFirstIn line match {
         case Some(regex("QN", name))   => println(line); NameIndex.queryByName(name)
-        case Some(regex("DN", name))   => println(line); println(" SORRY, DeleteByName not yet oeprational")
+        case Some(regex("DN", name))   => println(line); NameIndex.deleteByName(name)
         case Some(regex("IN", record)) => println(line); NameIndex.insert(new Record(RawData.parseNameFromLine(record)))
         case Some(regex("LN", _))      => println(line); println("  " + (NameIndex.listNames mkString "\n  "))
         case _                         => return
